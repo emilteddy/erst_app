@@ -5,7 +5,19 @@ library(shiny)
 pageWithSidebar(
   
   # Page header
-  headerPanel("Forudsigelse af segment"),
+  titlePanel(
+    tagList(
+      
+      # Title
+      title="Forudsigelse af segment",
+      
+      # Company image
+      span(img(src = "epinion.png",
+               height = 50,
+               width = 140),
+           style = "position:absolute;right:1em;")
+    ),
+  ),
   
   # Input values
   sidebarPanel(
@@ -60,7 +72,8 @@ pageWithSidebar(
     # Submit buttom
     actionButton(inputId = "submitbutton", 
                  label = "Beregn", 
-                 class = "btn btn-primary")
+                 class = "btn btn-primary",
+                 style = "background-color: #FF4646; border-color: #FF4646")
     
   ),
   

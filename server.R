@@ -2,6 +2,9 @@
 library(data.table)
 library(tree)
 
+# Set time zone
+Sys.setenv(TZ="CET")
+
 # Load model
 model <- readRDS(file = "dtree.rds")
 
